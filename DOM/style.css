@@ -10,3 +10,13 @@ h3 {
 .form {
   margin: 20px;
 }
+
+#div {
+  background-color: blue;
+  width: auto;
+  height: 100px;
+}
+
+#para {
+  text-align: center;
+}
