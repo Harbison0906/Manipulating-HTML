@@ -20,3 +20,15 @@ h3 {
 #para {
   text-align: center;
 }
+
+#name {
+  background-color: darkgray;
+  height: 100px;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+span {
+  font-size: 25px;
+}

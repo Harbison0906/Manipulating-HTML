@@ -76,6 +76,37 @@ para.addEventListener('click', function() {
   event.target.style.color = 'rgb(' + rand() + ',' + rand() + ',' + rand() + ')';
 });
 
+let objective5 = document.createElement('h3');
+let text5 = document.createTextNode('Objective 5:');
+objective5.appendChild(text5);
+
+let btn3 = document.createElement('button');
+btn3.id = 'button3';
+let btn3Text = document.createTextNode('Click me!');
+
+btn3.appendChild(btn3Text);
+
+let nameBox = document.createElement('div');
+nameBox.id = 'name';
+let span = document.createElement('span');
+span.id = 'nameSpan';
+let spanText = document.createTextNode('Seth Harbison');
+
+span.appendChild(spanText);
+
+step5.appendChild(btn3);
+step5.appendChild(nameBox);
+step5.insertBefore(objective5, step5.childNodes[0]);
+
+btn3.addEventListener('click', function() {
+  nameBox.appendChild(span);
+})
+
+
+
+
+
+
 
 
 
