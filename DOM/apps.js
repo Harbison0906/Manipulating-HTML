@@ -29,7 +29,7 @@ let btnText = document.createTextNode('Click me!');
 btn.appendChild(btnText);
 step1.appendChild(btn);
 
-btn.addEventListener('click', function() {
+btn.addEventListener('click', function () {
   alert('This is a nice alert message.');
 })
 
@@ -40,8 +40,8 @@ step2.insertBefore(objective2, step2.childNodes[1]);
 
 let btnSubmit = document.getElementById('btnSubmit');
 
-btnSubmit.addEventListener('click', function() {
-let textField = document.getElementById('textField').value;
+btnSubmit.addEventListener('click', function () {
+  let textField = document.getElementById('textField').value;
   alert(textField);
 })
 
@@ -52,10 +52,10 @@ step3.insertBefore(objective3, step3.childNodes[0]);
 
 let div = document.getElementById('div');
 
-div.addEventListener('mouseover', function() {
+div.addEventListener('mouseover', function () {
   event.target.style.background = 'red';
 
-  div.addEventListener('mouseleave', function() {
+  div.addEventListener('mouseleave', function () {
     event.target.style.background = '';
   })
 });
@@ -72,7 +72,7 @@ step4.insertBefore(objective4, step4.childNodes[0]);
 function rand() {
   return Math.floor(Math.random() * 255);
 }
-para.addEventListener('click', function() {
+para.addEventListener('click', function () {
   event.target.style.color = 'rgb(' + rand() + ',' + rand() + ',' + rand() + ')';
 });
 
@@ -98,9 +98,43 @@ step5.appendChild(btn3);
 step5.appendChild(nameBox);
 step5.insertBefore(objective5, step5.childNodes[0]);
 
-btn3.addEventListener('click', function() {
+btn3.addEventListener('click', function () {
   nameBox.appendChild(span);
 })
+
+let objective6 = document.createElement('h3');
+let text6 = document.createTextNode('Objective 6:')
+objective6.appendChild(text6);
+
+let btn4 = document.createElement('button');
+btn4.id = 'button4';
+let btn4Text = document.createTextNode('Click me, too!');
+btn4.appendChild(btn4Text);
+btn4.disabled = false;
+
+
+
+step6.appendChild(btn4);
+step6.insertBefore(objective6, step6.childNodes[0]);
+
+let list = document.createElement('ul');
+step6.appendChild(list);
+
+let counter = 0;
+btn4.addEventListener('click', function () {
+  let friends = ['Jake', 'Dub', 'Jonathan', 'Jesse', 'Michael', 'Clay', 'Adam', 'Justin', 'Reggie', 'Michael'];
+  let item = document.createElement('li');
+  let liText = document.createTextNode(friends[counter]);
+  item.appendChild(liText);
+  counter++;
+  list.appendChild(item);
+  if (counter >= 10) {
+    btn4.disabled = true;
+  }
+});
+
+
+
 
 
 

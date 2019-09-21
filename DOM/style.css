@@ -21,6 +21,10 @@ h3 {
   text-align: center;
 }
 
+#button3 {
+  margin-left: 20px;
+}
+
 #name {
   background-color: darkgray;
   height: 100px;
@@ -31,4 +35,8 @@ h3 {
 
 span {
   font-size: 25px;
+}
+
+#button4 {
+  margin-left: 20px;
 }
