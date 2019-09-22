@@ -1,3 +1,5 @@
+// adding six sections to store each objective
+
 let step1 = document.createElement('section');
 step1.id = 'step1';
 document.body.prepend(step1);
@@ -14,6 +16,9 @@ document.body.appendChild(step5);
 let step6 = document.createElement('section');
 step6.id = 'step6';
 document.body.appendChild(step6);
+
+// Objective 1 - a button that pulls an 
+// alert window with a nice message when clicked
 
 let objective1 = document.createElement('h3');
 let text1 = document.createTextNode('Objective 1:');
@@ -33,6 +38,11 @@ btn.addEventListener('click', function () {
   alert('This is a nice alert message.');
 })
 
+// Objective 2 - form with submit button 
+// that pulls alert window when clicked 
+// containing whatever is entered in the 
+// text field
+
 let objective2 = document.createElement('h3');
 let text2 = document.createTextNode('Objective 2:');
 objective2.appendChild(text2);
@@ -44,6 +54,8 @@ btnSubmit.addEventListener('click', function () {
   let textField = document.getElementById('textField').value;
   alert(textField);
 })
+
+// Objective 3 - Make a div change color when mousing over
 
 let objective3 = document.createElement('h3');
 let text3 = document.createTextNode('Objective 3:');
@@ -59,6 +71,9 @@ div.addEventListener('mouseover', function () {
     event.target.style.background = '';
   })
 });
+
+// Objective 4 - Paragraph that changes color to random color
+
 let objective4 = document.createElement('h3');
 let text4 = document.createTextNode('Objective 4:')
 let para = document.createElement('p');
@@ -75,6 +90,8 @@ function rand() {
 para.addEventListener('click', function () {
   event.target.style.color = 'rgb(' + rand() + ',' + rand() + ',' + rand() + ')';
 });
+
+//  Objective 5 - Button that adds a <span> with my name to an empty div
 
 let objective5 = document.createElement('h3');
 let text5 = document.createTextNode('Objective 5:');
@@ -101,6 +118,9 @@ step5.insertBefore(objective5, step5.childNodes[0]);
 btn3.addEventListener('click', function () {
   nameBox.appendChild(span);
 })
+
+// Objective 6 - Button that adds friend names as list items
+//  one at a time; button disables after last item is added
 
 let objective6 = document.createElement('h3');
 let text6 = document.createTextNode('Objective 6:')
