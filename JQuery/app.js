@@ -88,3 +88,31 @@ let name = $('<span>Seth Harbison</span>');
 $(btn3).click(function() {
   $(square).append(name);
 })
+
+// Objective 6 - Button that adds friend names as list items
+//  one at a time; button disables after last item is added
+
+let step6 = $('<section></section>');
+let heading6 = $('<h3>Objective 6:</h3>');
+$(step6).append(heading6);
+$('body').append(step6);
+
+let btn4 = $('<button>Click This!</button>');
+$(step6).append(btn4);
+
+let list = $('<ul></ul>');
+$(step6).append(list);
+
+let counter = 0;
+
+$(btn4).click(function() {
+  let friends = ['Jake', 'Dub', 'Jonathan', 'Jesse', 'Michael', 'Clay', 'Adam', 'Justin', 'Reggie', 'Michael'];
+  let item = $('<li></li>');
+  $(item).text(friends[counter]);
+  // $(item).text(friends[counter]);
+  counter++
+  $(list).append(item);
+  if (counter >= 10) {
+    $(btn4).attr("disabled","disabled");
+  }
+})
