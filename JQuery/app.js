@@ -34,13 +34,12 @@ $(btn2).click(function() {
 
 // Objective 3 - Make a div change color when mousing over
 
-let step3 = $('<section></section>');
+let step3 = $('#step3');
 let heading3 = $('<h3>Objective 3:</h3>');
 $(step3).append(heading3);
 $('body').append(step3);
 
-let div = $('<div></div>');
-$(div).attr('id', 'colorDiv');
+let div = $('#colorDiv');
 $(step3).append(div);
 
 $(div).mouseover(function() {
@@ -49,3 +48,43 @@ $(div).mouseover(function() {
 $(div).mouseleave(function() {
   $(this).css('background-color', '');
 });
+
+// Objective 4 - Paragraph that changes color to random color
+
+let step4 = $('<section></section>');
+let heading4 = $('<h3>Objective 4:</h3>');
+$(step4).append(heading4);
+$('body').append(step4);
+
+let tart = $('<img src="https://vignette.wikia.nocookie.net/adventuretimewithfinnandjake/images/7/7d/Toter.png/revision/latest?cb=20120713195935">')
+$(step4).append(tart);
+
+let para = $('<p>"This cosmic dance of bursting decadence and withheld permissions twists all our arms collectively, but if sweetness can win, and it can, then I\'ll still be here tomorrow, to high five you yesterday my friend. Peace." <br> - Royal Tart Toter</p>');
+$(step4).append(para);
+
+function rand() {
+  return Math.floor(Math.random() * 255);
+}
+$(para).click(function() {
+  $(this).css({'color': 'rgb(' + rand() + ',' + rand() + ',' + rand() + ')'});
+});
+
+//  Objective 5 - Button that adds a <span> with my name to an empty div
+
+let step5 = $('<section></section>');
+let heading5 = $('<h3>Objective 5:</h3>');
+$(step5).append(heading5);
+$('body').append(step5);
+
+let btn3 = $('<button>Press</button>');
+$(step5).append(btn3);
+
+let square = $('<div></div>')
+$(square).attr('id', 'square');
+$(step5).append(square);
+
+let name = $('<span>Seth Harbison</span>');
+
+$(btn3).click(function() {
+  $(square).append(name);
+})
