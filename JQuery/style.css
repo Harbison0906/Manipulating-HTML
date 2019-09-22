@@ -6,8 +6,30 @@ h3 {
   font-family: 'Lato', sans-serif;
   color: #FFFFFF;
   text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 button {
   color: #0B3948;
+  margin: 20px;
+  box-shadow: -1px 3px 5px 1px rgba(0,0,0,0.75);
+}
+
+#textField{
+  margin-left: 20px;
+}
+
+#btnSubmit {
+  box-shadow: -1px 3px 5px 1px rgba(0,0,0,0.75);
+  margin-left: 20px;
+}
+
+#colorDiv {
+  background-color: #0B3948;
+  box-shadow: -5px 3px 5px 1px rgba(0,0,0,0.75);
+  width: auto;
+  height: 100px;
+  border-radius: 10px 10px 10px 10px;
+  margin: 20px;
 }
